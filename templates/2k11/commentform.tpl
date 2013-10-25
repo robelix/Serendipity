@@ -27,6 +27,7 @@
         <select class="commentspice_rss_input" id="serendipity_commentform_rss" name="serendipity[promorss]"></select>
     </div>
 {/if}
+    {serendipity_hookPlugin hook="frontend_comment" data=$commentform_entry}
     <div class="form_tarea">
         <label for="serendipity_commentform_comment">{$CONST.COMMENT}{if $required_fields.comment}*{/if}</label>
         <textarea id="serendipity_commentform_comment" name="serendipity[comment]" rows="10" placeholder="{$CONST.TWOK11_PLACE_MESSAGE}"{if $required_fields.comment} required{/if}>{$commentform_data}</textarea>
@@ -35,7 +36,6 @@
         <label id="reply-to-hint" for="serendipity_replyTo">{$CONST.IN_REPLY_TO}</label>
         {$commentform_replyTo}
     </div>
-    {serendipity_hookPlugin hook="frontend_comment" data=$commentform_entry}
 {if $is_commentform_showToolbar}
     <fieldset class="form_toolbar">
         <legend class="visuallyhidden">{$CONST.TWOK11_FORMOPTIONS}</legend>
