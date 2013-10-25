@@ -253,7 +253,7 @@ class serendipity_plugin_recententries extends serendipity_plugin
 
                 echo '<dt class="serendipity_recententries_entrylink"><a href="' . $entryLink . '" title="' . serendipity_specialchars($entry['title']) . '">' . serendipity_specialchars($entry['title']) . '</a></dt>' . "\n"
                      . '<dd class="serendipity_recententries_entrydate serendipitySideBarDate">'
-                     . serendipity_specialchars(serendipity_strftime($dateformat, $entry['timestamp']))
+                     # . serendipity_specialchars(serendipity_strftime($dateformat, $entry['timestamp']))
                      . '</dd>' . "\n";
             }
             echo '</dl>' . "\n\n";
