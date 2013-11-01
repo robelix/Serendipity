@@ -31,3 +31,5 @@
 @define('TWOK11_TRACKBACKPREVIEW', 'Vorschau anzeigen');
 @define('TWOK11_REPLYORIGIN', 'Antwort auf');
 @define('TWOK11_FORMOPTIONS', 'Formular-Optionen');
+//IT Syndikat spezifisch
+@define('ITSheaderLogo', 'Header Logo Pfad');

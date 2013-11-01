@@ -23,3 +23,6 @@ DEADJOE
 *.git
 tests/phpunit.xml
 vagrant/*
+update.config.inc.php
+status.json
+status.txt
