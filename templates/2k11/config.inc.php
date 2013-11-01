@@ -61,6 +61,12 @@ $template_config = array(
         'default' => serendipity_getTemplateFile('header.jpg')
     ),
     array(
+        'var' => 'ITSheaderLogo',
+        'name' => ITSheaderLogo,
+        'type' => 'media',
+        'default' => none
+    ),
+    array(
         'var' => 'webfonts',
         'name' => TWOK11_WEBFONTS,
         'type' => 'select',
