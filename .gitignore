@@ -16,3 +16,6 @@ plugins/additional_plugins*
 .editorconfig
 *.git
 tests/phpunit.xml
+update.config.inc.php
+status.json
+status.txt
