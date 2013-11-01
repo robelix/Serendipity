@@ -71,12 +71,45 @@
         {if $template_option.header_img}
         <img src="{$template_option.header_img|escape}" alt="">
         {/if}
+        <script type="text/javascript">
+        jQuery(document).ready( function() 
+        {
+            console.log("ready");
+            jQuery.ajax({
+                type: "get",
+                url: "/status-s.php",
+                dataType: "json",
+                success:function(data,status) {
+                    if(data.toString()==="false"){
+                        jQuery("#itsstatus").html("Closed!");
+                        console.log("closed");
+                    }else{
+                        if(data.toString()==="true"){
+                            console.log("open");
+                            jQuery("#itsstatus").html("Open!");
+                        }else{
+                            jQuery("#itsstatus").html("Unknown!");
+                            console.log("unknown");
+                        }
+                    }
+                },
+                error:function(data,status) {
+                    console.log("Error!");
+                    console.log(data);
+                    console.log(status);
+                }
+            });
+
+        });
+        </script>
     </header>
     {if $template_option.use_corenav}
     <nav id="primary-nav">
         <h2 class="visuallyhidden">{$CONST.TWOK11_NAV_TITLE}</h2>
 
-        <ul class="clearfix">{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}</ul>
+        <ul class="clearfix">{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}
+            <li style="float:right;">IT-Syndikat Status:<span id="itsstatus" style="display:inline-block;"> Unknown</span></li>
+        </ul>
     </nav>
     {/if}
     <div class="clearfix{if $leftSidebarElements > 0 && $rightSidebarElements > 0} col3{elseif $leftSidebarElements > 0 && $rightSidebarElements == 0} col2l{else} col2r{/if}">
