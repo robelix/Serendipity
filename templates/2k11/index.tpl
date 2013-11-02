@@ -54,7 +54,7 @@
     <header id="banner" class="clearfix{if $leftSidebarElements > 0 && $rightSidebarElements > 0} col3{elseif $leftSidebarElements > 0 && $rightSidebarElements == 0} col2l{else} col2r{/if}{if not $template_option.use_corenav} no-nav{/if}">
         <div id="identity">
             {if $template_option.ITSheaderLogo}<a href="{$serendipityBaseURL}"><img class="logo" src="{$template_option.ITSheaderLogo}" /></a>{/if}
-            <a class="vatop" href="{$serendipityBaseURL}">
+            <a href="{$serendipityBaseURL}">
                 <h1>{$blogTitle}</h1>
                 {if $blogDescription}<p>{$blogDescription}</p>{/if}
             </a>
