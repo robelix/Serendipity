@@ -3,6 +3,14 @@
 Version 1.7.4 ()
 ------------------------------------------------------------------------
 
+    * Upgrade textile plugin libs - extends to PHP >= 5.3
+
+    * Fixed spamblocks Captcha imagecreate() with PHP > 5.3 versions
+
+    * Smarty 3.1.16 bugfix release - please read bundled-libs/Smarty/change_log.txt
+      about changes to versions 3.1.16 and 3.1.15.
+      Please also see special bundled-libs/Smarty/3.1.16_RELEASE_NOTES.txt
+
     * Removed blogg.de filter from spamblock plugin, adapted htaccess
       IP block algorithm for race conditions. .htaccess can now contain
       multiple Deny From ranges to prevent parsing problems (DLange)
@@ -12,19 +20,16 @@ Version 1.7.4 ()
 
     * Fixed possible double includement of plugin_internal.inc.php
 
-    * Smarty 3.1.15 release - please read  bundled-libs/Smarty/change_log.txt
-      (including fix for modifier capitalize from 3.1.16 trunk)
-
-    * Fix possible temporary caching errors failing $eventData[0]['properties']
+    * Fixed possible temporary caching errors, failing $eventData[0]['properties']
 
     * Basic support for static blocks (includeentry plugin) in 2k11.
 
     * Added "backend_footer" event hook
 
-    * Exclude "frontpage extensions" directories "_vti_cnf" on windows servers
-      in Media Library
+    * Exclude "_vti_cnf" dirs and "thumbs.db" files in MediaLibrary, to exclude 
+      possible added servers frontpage extensions and win dirs
 
-    * Fixed pagination when searching terms with fetchlimit < 4
+    * Fixed pagination when searching terms with fetchlimit lower 4
 
     * Fixed deprecated /e modifier with PHP >= 5.5 in nl2br plugin restore method
 
