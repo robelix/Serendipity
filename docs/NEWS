@@ -1,9 +1,50 @@
 #
 
-Version 1.7.4 ()
+Version 1.7.8 (February 9th, 2014)
 ------------------------------------------------------------------------
 
-    * Upgrade textile plugin libs - extends to PHP >= 5.3
+    * Fixed POST for db entry insert, caused by 1.7.6 security feature
+
+Version 1.7.7 (February 6th, 2014)
+------------------------------------------------------------------------
+
+    * Fixed PHP parse error in templatechooser plugin. Blame garvin. :(
+    
+Version 1.7.6 (February 6th, 2014)
+------------------------------------------------------------------------
+
+    * Fixed backend security issues, thanks to Stefan Schurtz:
+
+        - XSS of users realname in "Manage users" section
+          (Backend, requires login)
+        - XSS when creating an entry with bad id/timestamp values
+          (Backend, requires login)
+        - SQL-Injection for plugin installation parameter
+          (Backend, requires admin login)
+
+    * Templatechooser plugin uses "default" template as fallback,
+      not "bulletproof".
+
+    * Fixed nl2br non-working WYSIWYG treatment and added general markup 
+      behaviour notes
+
+    * Fixed textile compat fix
+
+Version 1.7.5 (January 18th, 2014)
+------------------------------------------------------------------------
+
+    * Fixed textile PHP 5.2 (namespace) compat issue
+
+    * Added default value to spamblocks required_fields option [name,comment]
+
+
+Version 1.7.4 (January 11th, 2014)
+------------------------------------------------------------------------
+
+    * Fixed emoticate plugin icon link to check for textile class
+
+    * Upgrade textile plugin libs - lib3 extends to PHP >= 5.3.
+      Please check for new options!
 
     * Fixed spamblocks Captcha imagecreate() with PHP > 5.3 versions
 
@@ -27,7 +68,7 @@ Version 1.7.4 ()
     * Added "backend_footer" event hook
 
     * Exclude "_vti_cnf" dirs and "thumbs.db" files in MediaLibrary, to exclude 
-      possible added servers frontpage extensions and win dirs
+      possible added servers frontpage extensions and MS-OS preview cache files
 
     * Fixed pagination when searching terms with fetchlimit lower 4
 

@@ -22,7 +22,7 @@
         <input id="serendipity_commentform_url" name="serendipity[url]" type="url" value="{$commentform_url}" placeholder="{$CONST.TWOK11_PLACE_URL}"{if $required_fields.url} required{/if}>
     </div>
 {if $spice.inputarticle}
-    <div id="serendipity_commentspice_rss"  class="form_tarea spicehidden">
+    <div id="serendipity_commentspice_rss" class="form_tarea spicehidden">
         <label for="serendipity_commentform_rss">{$spice.inputarticlelabel}</label>
         <select class="commentspice_rss_input" id="serendipity_commentform_rss" name="serendipity[promorss]"></select>
     </div>
@@ -44,7 +44,7 @@
         </div>
   {if $is_allowSubscriptions}
         <div class="form_box">
-            <input id="checkbox_subscribe" name="serendipity[subscribe]" type="checkbox" {$commentform_subscribe} ><label for="checkbox_subscribe">{$CONST.SUBSCRIBE_TO_THIS_ENTRY}</label>
+            <input id="checkbox_subscribe" name="serendipity[subscribe]" type="checkbox" {$commentform_subscribe}><label for="checkbox_subscribe">{$CONST.SUBSCRIBE_TO_THIS_ENTRY}</label>
         </div>
   {/if}
     </fieldset>

@@ -8,7 +8,7 @@
     <meta charset="{$head_charset}">
     <title>{$head_title|@default:$blogTitle}{if $head_subtitle} | {$head_subtitle}{/if}</title>
     <meta name="generator" content="Serendipity v.{$head_version}">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 {if $template_option.webfonts == 'droid'}
     <link  rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,700">
 {elseif $template_option.webfonts == 'ptsans'}
@@ -26,7 +26,7 @@
 {if $template_option.userstyles == true}
     <link rel="stylesheet" href="{serendipity_getFile file="user.css"}">
 {/if}
-    <script src="{serendipity_getFile file="js/modernizr-2.6.2.min.js"}"></script>
+    <script src="{serendipity_getFile file="js/modernizr-2.7.1.min.js"}"></script>
     <link rel="alternate" type="application/rss+xml" title="{$blogTitle} RSS feed" href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/index.rss2">
     <link rel="alternate" type="application/x.atom+xml"  title="{$blogTitle} Atom feed"  href="{$serendipityBaseURL}{$serendipityRewritePrefix}feeds/atom.xml">
 {if $entry_id}
