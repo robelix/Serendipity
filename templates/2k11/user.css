@@ -78,6 +78,7 @@ ul br {
 }
 .serendipity_entry_body div {
     float: left;
+    width:100%;
 }
 .serendipity_entry_body div.serendipity_imageComment_center {
     float:none;
