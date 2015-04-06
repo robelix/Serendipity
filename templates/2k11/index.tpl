@@ -42,21 +42,31 @@
 <a class="visuallyhidden" href="#content"><span lang="en">Skip to content</span></a>
 <div id="page" class="clearfix">
     <header id="banner" class="clearfix{if $leftSidebarElements > 0 && $rightSidebarElements > 0} col3{elseif $leftSidebarElements > 0 && $rightSidebarElements == 0} col2l{else} col2r{/if}{if not $template_option.use_corenav} no-nav{/if}">
-        <div id="identity">
+
+	    <a  class="title" href="{$serendipityBaseURL}">
+                <h1>{$blogTitle}</h1>
+                <h3>{$blogDescription}</h3>
+		<h3>
+            		Space Status: <span id="itsstatus">Unknown</span>
+		</h3>
+                </a>
+            <a class="logo" href="{$serendipityBaseURL}">
+                <img src="/templates/2k11/img/logo2013.svg"></a>
+
+        <!--div id="identity">
             {if $template_option.ITSheaderLogo}<a href="{$serendipityBaseURL}"><img class="logo" src="{$template_option.ITSheaderLogo}" /></a>{/if}
             <a class="vatop" href="{$serendipityBaseURL}">
                 <h1>{$blogTitle}</h1>
                 {if $blogDescription}<p>{$blogDescription}</p>{/if}
             </a>
-        </div>
+        </div -->
 
         <form id="searchform" action="{$serendipityHTTPPath}{$serendipityIndexFile}" method="get">
-        <div>
             <input type="hidden" name="serendipity[action]" value="search">
             <label for="serendipityQuickSearchTermField">{$CONST.QUICKSEARCH}</label>
             <input id="serendipityQuickSearchTermField" name="serendipity[searchTerm]" type="search" placeholder="{$CONST.TWOK11_PLACE_SEARCH}" value="">
             <input id="searchsend" name="serendipity[searchButton]" type="submit" value="{$CONST.GO}">
-        </div>
+
         </form>
         {serendipity_hookPlugin hook="quicksearch_plugin" hookAll="true"}
         {if $template_option.header_img}
@@ -72,14 +82,14 @@
                 dataType: "json",
                 success:function(data,status) {
                     if(data.toString()==="false"){
-                        jQuery("#itsstatus").html("Closed!");
+                        jQuery("#itsstatus").html("Closed");
                         console.log("closed");
                     }else{
                         if(data.toString()==="true"){
                             console.log("open");
-                            jQuery("#itsstatus").html("Open!");
+                            jQuery("#itsstatus").html("Open");
                         }else{
-                            jQuery("#itsstatus").html("Unknown!");
+                            jQuery("#itsstatus").html("Unknown");
                             console.log("unknown");
                         }
                     }
@@ -99,7 +109,6 @@
         <h2 class="visuallyhidden">{$CONST.TWOK11_NAV_TITLE}</h2>
 
         <ul class="clearfix">{foreach from=$navlinks item="navlink" name="sbnav"}{if $navlink.title!=""&&$navlink.href!=""}<li>{if $currpage==$navlink.href or $currpage2==$navlink.href}<span>{else}<a href="{$navlink.href}">{/if}{$navlink.title}{if $currpage==$navlink.href or $currpage2==$navlink.href}</span>{else}</a>{/if}</li>{/if}{/foreach}
-            <li style="float:right;">IT-Syndikat Status:<span id="itsstatus" style="display:inline-block;"> Unknown</span></li>
         </ul>
     </nav>
     {/if}
