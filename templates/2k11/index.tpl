@@ -46,9 +46,17 @@
 	    <a  class="title" href="{$serendipityBaseURL}">
                 <h1>{$blogTitle}</h1>
                 <h3>{$blogDescription}</h3>
+		<!-- normal mode >
 		<h3>
             		Space Status: <span id="itsstatus">Unknown</span>
+		</h3 -->
+		<!-- Space invasion mode -->
+		<h3 style="margin-bottom:5px;">
+            		Space Invasion Status: <span id="itsstatus">Unknown</span>
 		</h3>
+		<h6>
+            		Visit us at Freies Theater Innsbruck
+		</h6>
                 </a>
             <a class="logo" href="{$serendipityBaseURL}">
                 <img src="/templates/2k11/img/logo2013.svg"></a>
