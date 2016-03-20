@@ -19,3 +19,4 @@ tests/phpunit.xml
 update.config.inc.php
 status.json
 status.txt
+pinged.txt
