@@ -26,3 +26,4 @@ vagrant/*
 update.config.inc.php
 status.json
 status.txt
+pinged.txt
