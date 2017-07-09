@@ -151,8 +151,8 @@ article {
 .serendipity_freetag_taglist,
 .serendipity_plugin_recententries,
 .serendipity_plugin_POPULARENTRIES,
-.serendipity_archives_plugin,
-.serendipity_syndication_plugin,
+.serendipity_plugin_archives,
+.serendipity_plugin_syndication,
 .serendipity_plugin_freetag {
     background-color:#cab293;
     margin:14px;
@@ -404,8 +404,8 @@ article {
 .serendipity_freetag_taglist,
 .serendipity_plugin_recententries,
 .serendipity_plugin_POPULARENTRIES,
-.serendipity_archives_plugin,
-.serendipity_syndication_plugin,
+.serendipity_plugin_archives,
+.serendipity_plugin_syndication,
 .serendipity_plugin_freetag {
     background-color:#cab293;
     margin:14px;
