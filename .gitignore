@@ -14,7 +14,4 @@ plugins/additional_plugins*
 /.project
 .DS_Store
 .editorconfig
-update.config.inc.php
-status.json
-status.txt
-pinged.txt
+api/
