@@ -20,10 +20,5 @@ DEADJOE
 /.project
 .DS_Store
 .editorconfig
-*.git
-tests/phpunit.xml
 vagrant/*
-update.config.inc.php
-status.json
-status.txt
-pinged.txt
+api/
