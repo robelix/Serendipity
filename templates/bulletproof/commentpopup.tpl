@@ -14,7 +14,7 @@
    <!-- base styles needed for bulletproof -->
    <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="base.css"}" />
    <!-- style.css -->
-   <link rel="stylesheet" type="text/css" href="{$serendipityHTTPPath}serendipity.css.php" />
+   <link rel="stylesheet" type="text/css" href="/serendipity.css.php" />
    <!--[if IE 6]>
    <link rel="stylesheet" type="text/css" href="{serendipity_getFile file="ie6.css"}" />
    <![endif]-->
