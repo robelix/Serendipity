@@ -11,7 +11,7 @@
     <title>{$head_title|@default:$blogTitle} {if $head_subtitle} - <?= $GLOBALS['tpl']['head_subtitle'] ?><?php endif; ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=<?= $GLOBALS['tpl']['head_charset'] ?>" />
     <meta name="generator" content="Serendipity v.<?= $GLOBALS['tpl']['serendipityVersion'] ?>" />
-    <link rel="stylesheet" type="text/css" href="<?= $GLOBALS['tpl']['serendipityHTTPPath'] ?>serendipity.css.php" />
+    <link rel="stylesheet" type="text/css" href="/serendipity.css.php" />
     <link rel="alternate"  type="application/rss+xml" title="<?= $GLOBALS['tpl']['blogTitle'] ?> RSS feed" href="<?= $GLOBALS['tpl']['serendipityBaseURL'] ?><?= $GLOBALS['tpl']['serendipityRewritePrefix'] ?>feeds/index.rss2" />
     <link rel="alternate"  type="application/x.atom+xml"  title="<?= $GLOBALS['tpl']['blogTitle'] ?> Atom feed"  href="<?= $GLOBALS['tpl']['serendipityBaseURL'] ?><?= $GLOBALS['tpl']['serendipityRewritePrefix'] ?>feeds/atom.xml" />
 </head>

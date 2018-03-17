@@ -86,7 +86,7 @@
             console.log("ready");
             jQuery.ajax({
                 type: "get",
-                url: "/status-s.php",
+                url: "/api/status-s.php",
                 dataType: "json",
                 success:function(data,status) {
                     if(data.toString()==="false"){
