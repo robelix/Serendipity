@@ -78,6 +78,7 @@
         <p class="serendipity_msg_notice">{$CONST.DATA_COMMENT_APPROVED|@sprintf:$CONST.COMMENT_APPROVED}</p>
         {/if}
 
+        {if $entry.allow_comments}
         <section id="trackbacks" class="serendipity_comments serendipity_section_trackbacks">
             <h3>{$CONST.TRACKBACKS}</h3>
 
@@ -119,7 +120,6 @@
         {elseif not $entry.allow_comments}
             <p class="serendipity_msg_important">{$CONST.COMMENTS_CLOSED}</p>
         {/if}
-        {if $entry.allow_comments}
         <section id="respond" class="serendipity_section_commentform">
             <h3>{$CONST.ADD_COMMENT}</h3>
             {$COMMENTFORM}
