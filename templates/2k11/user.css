@@ -15,6 +15,9 @@ textarea:focus {
 .break {
     clear: both;
 }
+.serendipity_entry img.serendipity_image_center {
+	border: none;
+}
 
 .no-boxshadow input[type=text]:focus,
 .no-boxshadow input[type=search]:focus,
