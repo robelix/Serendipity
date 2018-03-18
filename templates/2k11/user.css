@@ -571,3 +571,86 @@ div.form_field label {
     
     .ie7 .col2l #content { left: 0%; }
 }
+
+
+/* die erste blockquote nicht formatieren für import vom meta */
+.serendipity_entry_body blockquote:first-of-type {
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    quotes: '' '';
+}
+.serendipity_entry_body blockquote:first-of-type p {
+    quotes: '' '';
+}
+
+.serendipity_entry_body blockquote:first-of-type blockquote {
+    padding-left:12px;
+    margin-bottom:16px;
+    margin-right:40px;
+    margin-left:40px;
+    border-left-width:4px;
+    quotes: '„' '“';
+    background-color:#f9f9f9;
+}
+
+.serendipity_entry_body blockquote:first-of-type blockquote p {
+    quotes: '„' '“';
+}
+
+/* aside - linkboxen von meta */
+aside.onebox {
+    border: 5px solid #e9e9e9;
+    margin-bottom: 1em;
+    padding: 12px 25px 12px 12px;
+    font-size: 13px;
+    clear:both;
+    float:none;
+}
+
+aside.onebox .onebox-metadata {
+    display:block;
+    float:none;
+    clear: both;
+}
+
+aside.onebox header {
+    margin-bottom: 8px;
+}
+
+aside.onebox .onebox-body {
+    clear: both;
+}
+
+aside.onebox .onebox-body h3, 
+aside.onebox .onebox-body h4 {
+    font-size: font-size 14px;
+    margin: 0 0 10px 0;
+}
+
+aside.onebox .onebox-body a[href] {
+    text-decoration: none;
+}
+
+aside.onebox .onebox-body img {
+    height: auto;
+    width: auto;
+    max-height:120px;
+    max-width:30%;
+    float: left;
+    margin-right: 10px;
+}
+
+aside.onebox div.aspect-image {
+    float: left;
+    display: contents;
+}
+aside.onebox div.date,
+aside.onebox div.tweet {
+    width:80%;
+}
+
+// tighten bottom margin on last para
+aside.onebox .onebox-body p:last-child {
+    margin-bottom: 4px;
+}
