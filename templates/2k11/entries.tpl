@@ -4,7 +4,11 @@
     {assign var="entry" value=$entry scope="parent"}
     <article id="post_{$entry.id}" class="clearfix serendipity_entry{if $dategroup.is_sticky} sticky{/if}">
         <header class="clearfix">
-            <h2><a href="{$entry.link}">{$entry.title}</a></h2>
+            {if $entry.properties.ep_aggregator_articleurl}
+                <h2><a href="{$entry.properties.ep_aggregator_articleurl}">{$entry.title}</a></h2>
+            {else}
+                <h2><a href="{$entry.link}">{$entry.title}</a></h2>
+            {/if}
 
             <span class="serendipity_byline block_level"><span class="single_user">{$CONST.POSTED_BY} <a href="{$entry.link_author}">{$entry.author}</a> {$CONST.ON} </span><time datetime="{$entry.timestamp|@serendipity_html5time}">{$entry.timestamp|@formatTime:$template_option.date_format}</time>{if $entry.is_entry_owner and not $is_preview} | <a href="{$entry.link_edit}">{$CONST.EDIT_ENTRY}</a>{/if}</span>
         </header>
