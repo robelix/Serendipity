@@ -119,10 +119,12 @@
         {elseif not $entry.allow_comments}
             <p class="serendipity_msg_important">{$CONST.COMMENTS_CLOSED}</p>
         {/if}
+        {if $entry.allow_comments}
         <section id="respond" class="serendipity_section_commentform">
             <h3>{$CONST.ADD_COMMENT}</h3>
             {$COMMENTFORM}
         </section>
+        {/if}
 
     {/if}
     {$entry.backend_preview}
