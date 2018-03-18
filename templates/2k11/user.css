@@ -174,3 +174,28 @@ ul br {
     float: none;
     position: relative;
 }
+
+/* die erste blockquote nicht formatieren für import vom meta */
+.serendipity_entry_body blockquote:first-of-type {
+	border-width: 0px;
+	padding: 0px;
+	margin: 0px;
+	quotes: '' '';
+}
+.serendipity_entry_body blockquote:first-of-type p {
+        quotes: '' '';
+}
+
+.serendipity_entry_body blockquote:first-of-type blockquote {
+	padding-left:12px;
+	margin-bottom:16px;
+	margin-right:40px;
+	margin-left:40px;
+	border-left-width:4px;
+	quotes: '„' '“';
+}
+
+.serendipity_entry_body blockquote:first-of-type blockquote p {
+        quotes: '„' '“';
+}
+
