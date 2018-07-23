@@ -256,3 +256,8 @@ aside.onebox div.tweet {
 aside.onebox .onebox-body p:last-child {
     margin-bottom: 4px;
 }
+
+img.emoji {
+    max-height: 18px;
+}
+
