@@ -15,6 +15,9 @@ textarea:focus {
 .break {
     clear: both;
 }
+.clear {
+    clear: both;
+}
 .serendipity_entry img.serendipity_image_center {
 	border: none;
 }
