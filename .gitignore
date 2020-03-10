@@ -20,5 +20,6 @@ DEADJOE
 /.project
 .DS_Store
 .editorconfig
+*.git
+tests/phpunit.xml
 vagrant/*
-api/
