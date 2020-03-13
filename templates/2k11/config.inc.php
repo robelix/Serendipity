@@ -60,9 +60,9 @@ $template_config = array(
     ),
     array(
         'var' => 'ITSheaderLogo',
-        'name' => ITSheaderLogo,
+        'name' => 'ITSheaderLogo',
         'type' => 'media',
-        'default' => none
+        'default' => 'none'
     ),
     array(
         'var' => 'webfonts',
